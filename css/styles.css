@@ -1,0 +1,154 @@
+/* Colors */
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --vpale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Typography */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--pale-blue);
+  background-image: url(/images/pattern-background-mobile.svg);
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+  }
+}
+
+/* Card */
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 340px;
+  box-shadow: 0 20px 20px lightgray;
+}
+
+.card__header {
+  overflow: hidden;
+}
+
+.card__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--vpale-blue);
+  padding: 3rem;
+}
+
+.card__description {
+  text-align: center;
+  color: gray;
+}
+
+.card__title {
+  color: var(--dark-blue);
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 400px;
+  }
+
+  .card__body {
+    padding: 5rem;
+  }
+}
+
+/* Plan */
+
+.plan-container {
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan__icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.plan-info {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.plan-price {
+  display: block;
+  margin-left: 1rem;
+  color: gray;
+  margin-top: 0.5rem;
+}
+
+.plan-type {
+  margin-left: 1rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+/* Button */
+
+.payment-button {
+  border-radius: 5px;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  background: var(--bright-blue);
+  color: white;
+  font-weight: 700;
+  outline: 0;
+  border: 0;
+}
+
+/* Anchors */
+
+.cancel-link {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+  display: inline-block;
+  margin: 2rem;
+  margin-bottom: 0;
+}
+
+.change-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--bright-blue);
+  margin-bottom: 3rem;
+}
